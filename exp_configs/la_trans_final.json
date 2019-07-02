@@ -1,0 +1,55 @@
+{
+    "trans_alexnet_LA": {
+        "save_exp": "la_pub/trans_test/alexnet_LA",
+        "load_exp": "la_pub/test/alexnet_LA",
+        "port": 27009,
+        "ten_crop": true,
+        "model_type": "alexnet_bn_no_drop",
+        "get_all_layers": "conv1,conv2,conv3,conv4,conv5",
+        "train_crop": "alexnet_crop_flip",
+        "weight_decay": 0,
+        "load_step": 1601440,
+        "lr_boundaries": "2051845,2151935",
+        "train_num_steps": 2252025,
+        "fre_filter": 50045,
+        "fre_cache_filter": 10009
+    },
+    "trans_vggnet_LA": {
+        "save_exp": "la_pub/trans_test/vggnet_LA",
+        "load_exp": "la_pub/test/vggnet_LA",
+        "port": 27009,
+        "ten_crop": true,
+        "model_type": "vggnet_fx",
+        "get_all_layers": "0,1,2,3,4",
+        "load_step": 890712,
+        "lr_boundaries": "1000900,1301170",
+        "train_num_steps": 1401260,
+        "fre_filter": 50045,
+        "fre_cache_filter": 10009
+    },
+    "trans_res18_LA": {
+        "save_exp": "la_pub/trans_test/res18_LA",
+        "load_exp": "la_pub/test/res18_LA",
+        "port": 27009,
+        "ten_crop": true,
+        "get_all_layers": "1,3,5,7,9",
+        "load_step": 2001800,
+        "lr_boundaries": "2302070,2602340",
+        "train_num_steps": 2702430,
+        "fre_filter": 50045,
+        "fre_cache_filter": 10009
+    },
+    "trans_res50_LA": {
+        "save_exp": "la_pub/trans_test/res50_LA",
+        "load_exp": "la_pub/test/res50_LA",
+        "port": 27009,
+        "ten_crop": true,
+        "model_type": "resnet50",
+        "get_all_layers": "1,4,8,14,17",
+        "load_step": 2001800,
+        "lr_boundaries": "2302070,2602340",
+        "train_num_steps": 2702430,
+        "fre_filter": 50045,
+        "fre_cache_filter": 10009
+    }
+}

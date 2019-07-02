@@ -1,0 +1,103 @@
+{
+    "alexnet_IR": {
+        "exp_id": "alexnet_IR",
+        "port": 27009,
+        "task": "IR",
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "alexnet_bn_no_drop",
+        "train_num_steps": 100090,
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "alexnet_LA": {
+        "exp_id": "alexnet_LA",
+        "port": 27009,
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "alexnet_bn_no_drop",
+        "load_exp": "la_pub/test/alexnet_IR",
+        "load_step": 100090,
+        "lr_boundaries": "1190000,1423100",
+        "train_num_steps": 1601440,
+        "kmeans_k": "30000,30000,30000",
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "vggnet_IR": {
+        "exp_id": "vggnet_IR",
+        "port": 27009,
+        "task": "IR",
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "vggnet_fx",
+        "train_num_steps": 100090,
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "vggnet_LA": {
+        "exp_id": "vggnet_LA",
+        "port": 27009,
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "vggnet_fx",
+        "load_exp": "la_pub/test/vggnet_IR",
+        "load_step": 100090,
+        "lr_boundaries": "680681,790791",
+        "kmeans_k": "10000,10000,10000,10000,10000,10000",
+        "train_num_steps": 890712,
+        "batch_size": 256,
+        "fre_valid": 5004,
+        "fre_filter": 50040,
+        "fre_cache_filter": 5004
+    },
+    "res18_IR": {
+        "exp_id": "res18_IR",
+        "port": 27009,
+        "task": "IR",
+        "db_name": "la_pub",
+        "col_name": "test",
+        "train_num_steps": 100090,
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "res18_LA": {
+        "exp_id": "res18_LA",
+        "port": 27009,
+        "task": "LA",
+        "db_name": "la_pub",
+        "col_name": "test",
+        "load_exp": "la_pub/test/res18_IR",
+        "load_step": 100090,
+        "kmeans_k": "30000,30000,30000,30000,30000,30000,30000,30000,30000,30000",
+        "lr_boundaries": "1600000,1873411",
+        "train_num_steps": 2001800,
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "res50_IR": {
+        "exp_id": "res50_IR",
+        "port": 27009,
+        "task": "IR",
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "resnet50",
+        "train_num_steps": 100090,
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    },
+    "res50_LA": {
+        "exp_id": "res50_LA",
+        "port": 27009,
+        "db_name": "la_pub",
+        "col_name": "test",
+        "model_type": "resnet50",
+        "load_exp": "la_pub/test/res50_IR",
+        "load_step": 100090,
+        "lr_boundaries": "1522000,1895857",
+        "train_num_steps": 2001800,
+        "kmeans_k": "30000,30000,30000,30000,30000,30000,30000,30000,30000,30000",
+        "fre_filter": 100090,
+        "fre_cache_filter": 10009
+    }
+}
