@@ -26,6 +26,10 @@ Then run the following command to do the LA training:
 python train.py --config exp_configs/la_final.json:res18_LA --image_dir /path/to/imagenet/tfrs --gpu [your gpu number] --cache_dir /path/to/model/save/folder
 ```
 
+### Code reading
+
+For your convenience, the most important function you want to look at is function `build_targets` in script `model/instance_model.py`.
+
 ## Transfer learning to ImageNet
 After finishing the LA training, run the following command to do the transfer learning to ImageNet:
 ```
