@@ -3,6 +3,7 @@ import tensorflow as tf
 import time
 import tqdm
 import pdb
+import copy
 
 
 class TrainFramework(object):
@@ -44,6 +45,19 @@ class TrainFramework(object):
                 train=train,
                 **model_params)
         model_params['func'] = func
+
+        if 'trainable_scopes' in model_params:
+            trainable_scopes = model_params['trainable_scopes']
+            all_train_ref = tf.get_collection_ref(
+                    tf.GraphKeys.TRAINABLE_VARIABLES)
+            cp_all_train_ref = copy.copy(all_train_ref)
+            for each_v in cp_all_train_ref:
+                should_be_trainable = False
+                for each_trainable_scope in trainable_scopes:
+                    if each_v.op.name.startswith(each_trainable_scope):
+                        should_be_trainable = True
+                if not should_be_trainable:
+                    all_train_ref.remove(each_v)
         return outputs
 
     def build_train_op(self):
