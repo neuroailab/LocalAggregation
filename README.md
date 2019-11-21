@@ -1,5 +1,6 @@
 # Local Aggregation for Unsupervised Learning of Visual Embeddings
 This repo implements the Local Aggregation (LA) algorithm on ImageNet and related transfer learning pipelines for both ImageNet and Places205.
+Pytorch implementation of this algorithm is at [link](https://github.com/neuroailab/LocalAggregation-Pytorch).
 This repo also includes a tensorflow implementation for the Instance Recognition (IR) task introduced in paper "Unsupervised Feature Learning via Non-Parametric Instance Discrimination".
 
 # Instructions for training
