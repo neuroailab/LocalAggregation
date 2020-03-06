@@ -11,8 +11,6 @@ import time
 import functools
 import inspect
 
-import tfutils.defaults
-
 from model import preprocessing as prep
 from model import instance_model
 from model.memory_bank import MemoryBank
