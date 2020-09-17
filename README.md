@@ -7,6 +7,7 @@ This repo also includes a tensorflow implementation for the Instance Recognition
 
 ## Prerequisites
 We have tested this repo under Ubuntu 16.04 with tensorflow version 1.9.0.
+Training LA model requires `faiss==1.6.1`.
 
 ## Data preparation
 Prepare the ImageNet data as the raw JPEG format used in pytorch ImageNet training (see [link](https://github.com/pytorch/vision/blob/master/torchvision/datasets/imagenet.py)).
