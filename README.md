@@ -3,6 +3,9 @@ This repo implements the Local Aggregation (LA) algorithm on ImageNet and relate
 Pytorch implementation of this algorithm is at [LocalAggregation-Pytorch](https://github.com/neuroailab/LocalAggregation-Pytorch).
 This repo also includes a tensorflow implementation for the Instance Recognition (IR) task introduced in paper "Unsupervised Feature Learning via Non-Parametric Instance Discrimination".
 
+# Pretrained Model
+A Local-Aggregation pretrained ResNet-18 model can be found at [link](http://visualmaster-models.s3.amazonaws.com/la_orig/checkpoint-1901710.tar), though this model may not be as good as a fully trained model by this repo, as it's a slightly earlier checkpoint than the final one.
+
 # Instructions for training
 
 ## Prerequisites
