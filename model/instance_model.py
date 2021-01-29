@@ -12,7 +12,6 @@ from . import alexnet_model
 from . import vggnet_model
 from .memory_bank import MemoryBank
 from .prep_utils import ColorNormalize
-from .cluster_km import Kmeans
 
 DATA_LEN_IMAGENET_FULL = 1281167
 
@@ -310,6 +309,7 @@ def build_targets(
         clustering = None
         ret_loss = [loss, loss_model, loss_noise]
     elif task == 'LA':
+        from .cluster_km import Kmeans
         clustering = Kmeans(kmeans_k, memory_bank, cluster_labels)
         loss = loss_builder.get_LA_loss(cluster_labels)
         ret_loss = [loss]
